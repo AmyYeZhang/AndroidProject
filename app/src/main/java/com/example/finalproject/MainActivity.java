@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Create intent for each page
         Intent go_to_geo = new Intent(MainActivity.this, GeoDataActivity.class);
-        Intent go_to_soccer = new Intent(MainActivity.this, SoccerMathActivity.class);
+        Intent go_to_soccer = new Intent(MainActivity.this, SoccerMatchActivity.class);
         Intent go_to_lyrics = new Intent(MainActivity.this, LyricsSearchActivity.class);
         Intent go_to_deezer = new Intent(MainActivity.this, DeezerSongActivity.class);
 

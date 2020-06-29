@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".DeezerSongActivity"></activity>
         <activity android:name=".LyricsSearchActivity" />
-        <activity android:name=".SoccerMathActivity" />
+        <activity android:name=".SoccerMatchActivity" />
         <activity android:name=".GeoDataActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
