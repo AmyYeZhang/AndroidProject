@@ -1,0 +1,17 @@
+<resources>
+    <!--First page-->
+    <string name="app_name">FinalProject</string>
+
+    <!--Geo data activity-->
+    <string name="geo_data">Geo data</string>
+
+    <!--Soccer match activity-->
+    <string name="soccer_match">Soccer match</string>
+
+    <!--Lyrics search activity-->
+    <string name="lyrics_search">Lyrics search</string>
+
+    <!--Deezer song activity-->
+    <string name="deezer_song">Deezer song</string>
+
+</resources>

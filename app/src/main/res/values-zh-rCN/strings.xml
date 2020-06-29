@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--First page-->
+    <string name="app_name">安卓终极项目</string>
+
+    <!--Geo data activity-->
+    <string name="geo_data">地球科学</string>
+
+    <!--Soccer match activity-->
+    <string name="soccer_match">足球竞赛</string>
+
+    <!--Lyrics search activity-->
+    <string name="lyrics_search">歌词筛选</string>
+
+    <!--Deezer song activity-->
+    <string name="deezer_song">Deezer歌曲</string>
+</resources>
