@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SoccerMatchActivity">
+
+    <TextView
+        android:id="@+id/soccerDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/soccer_detail"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"/>
+
+    <VideoView
+        android:id="@+id/soccerVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/soccerDetail"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/soccerDTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soccerVideoView"/>
+
+    <TextView
+        android:id="@+id/soccerDCompetition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soccerDTitle"/>
+
+    <TextView
+        android:id="@+id/soccerDDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soccerDCompetition"/>
+
+    <ProgressBar
+        android:id="@+id/pbDSoccer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_above="@+id/rlDBottom"
+        style="?android:attr/progressBarStyleHorizontal" />
+
+    <RelativeLayout
+        android:id="@+id/rlDBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnDHighlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="fill"
+            android:text="@string/soccer_highlight" />
+        <EditText
+            android:id="@+id/etDSoccer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btnDHighlight"
+            android:layout_toLeftOf="@+id/cbDFavorite"
+            android:hint="@string/soccer_hint"/>
+        <CheckBox
+            android:id="@+id/cbDFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="fill"
+            android:text="@string/soccer_favorite" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

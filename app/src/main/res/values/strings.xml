@@ -7,6 +7,13 @@
 
     <!--Soccer match activity-->
     <string name="soccer_match">Soccer match</string>
+    <string name="soccer_MyFavorite">My Favorite</string>
+    <string name="soccer_help">Help</string>
+    <string name="soccer_hint">Input here</string>
+    <string name="soccer_favorite">Favorite</string>
+    <string name="soccer_quit">Back</string>
+    <string name="soccer_detail">Soccer Match Detail</string>
+    <string name="soccer_highlight">Highlight On/Off</string>
 
     <!--Lyrics search activity-->
     <string name="lyrics_search">Lyrics search</string>

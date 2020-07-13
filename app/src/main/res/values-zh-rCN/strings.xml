@@ -8,6 +8,13 @@
 
     <!--Soccer match activity-->
     <string name="soccer_match">足球竞赛</string>
+    <string name="soccer_MyFavorite">我的收藏</string>
+    <string name="soccer_help">帮助</string>
+    <string name="soccer_hint">请在这里输入</string>
+    <string name="soccer_favorite">收藏</string>
+    <string name="soccer_quit">返回</string>
+    <string name="soccer_detail">足球比赛详情</string>
+    <string name="soccer_highlight">精彩回顾 开/关</string>
 
     <!--Lyrics search activity-->
     <string name="lyrics_search">歌词筛选</string>
