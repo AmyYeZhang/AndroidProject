@@ -8,6 +8,18 @@
 
     <!--Soccer match activity-->
     <string name="soccer_match">足球竞赛</string>
+    <string name="soccer_MyFavorite">我的收藏</string>
+    <string name="soccer_help">帮助</string>
+    <string name="soccer_hint">请在这里输入</string>
+    <string name="soccer_favorite">收藏</string>
+    <string name="soccer_quit">返回</string>
+    <string name="soccer_detail">足球竞赛详情</string>
+    <string name="soccer_highlight">精彩回顾 开/关</string>
+    <string name="soccer_list_toast">足球竞赛信息正在加载</string>
+    <string name="soccer_list_snackbar">足球竞赛信息加载成功</string>
+    <string name="soccer_detail_toast">正在加载图片</string>
+    <string name="soccer_detail_snackbar_add">已加入我的收藏</string>
+    <string name="soccer_detail_snackbar_delete">已从我的收藏移除</string>
 
     <!--Lyrics search activity-->
     <string name="lyrics_search">歌词筛选</string>
