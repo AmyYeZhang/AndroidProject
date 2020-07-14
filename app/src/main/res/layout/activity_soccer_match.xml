@@ -50,6 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/btnSoccerFList"
             android:layout_toStartOf="@+id/btnSoccerHelp"
+            android:focusable="false"
             android:hint="@string/soccer_hint"/>
         <Button
             android:id="@+id/btnSoccerHelp"

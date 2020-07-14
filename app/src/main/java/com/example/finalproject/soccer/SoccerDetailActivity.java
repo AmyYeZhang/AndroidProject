@@ -2,8 +2,10 @@ package com.example.finalproject.soccer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -38,6 +40,7 @@ import java.net.URL;
 public class SoccerDetailActivity extends AppCompatActivity {
 
     private ProgressBar pbDetail;
+    private SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +76,7 @@ public class SoccerDetailActivity extends AppCompatActivity {
         {
             if(b){
                 //save to database
+                insertSoccerToDatabase(title, team1, team2, videoUrl, date, competition, thumbnailUrl);
             }else{
                 //remove from database
             }
@@ -129,5 +133,31 @@ public class SoccerDetailActivity extends AppCompatActivity {
             //set the ProgressBar
             pbDetail.setVisibility(View.INVISIBLE);
         }
+    }
+
+    private void insertSoccerToDatabase(String title, String team1, String team2, String videoUrl, String date, String competition, String thumbnailUrl) {
+        //get a database connection:
+        SoccerOpener dbOpener = new SoccerOpener(this);
+        db = dbOpener.getWritableDatabase(); //This calls onCreate() if you've never built the table before, or onUpgrade if the version here is newer
+
+        //add to the database and get the new ID
+        ContentValues newRowValues = new ContentValues();
+        //how to check the duplication???
+
+        //Now provide a value for every database column defined in MyOpener.java:
+        newRowValues.put(SoccerOpener.SOCCER_COL_TITLE, title);
+        newRowValues.put(SoccerOpener.SOCCER_COL_TEAM1, team1);
+        newRowValues.put(SoccerOpener.SOCCER_COL_TEAM2, team2);
+        newRowValues.put(SoccerOpener.SOCCER_COL_VIDEOURL, videoUrl);
+        newRowValues.put(SoccerOpener.SOCCER_COL_DATE, date);
+        newRowValues.put(SoccerOpener.SOCCER_COL_COMPETITION, competition);
+        newRowValues.put(SoccerOpener.SOCCER_COL_THUMBNAILURL, thumbnailUrl);
+
+        //Now insert in the database:
+        long newId = db.insert(SoccerOpener.TABLE_NAME, null, newRowValues);
+    }
+
+    private void deleteSoccerFromDatabase(long id) {
+        db.delete(SoccerOpener.TABLE_NAME, SoccerOpener.SOCCER_COL_ID + "= ?", new String[] {Long.toString(id)});
     }
 }

@@ -52,7 +52,7 @@ public class SoccerMatchActivity extends AppCompatActivity {
         pbSoccer.setVisibility(View.VISIBLE);
 
         titleList = findViewById(R.id.lvSoccer);
-        //titleList.setAdapter(myAdapter);
+        titleList.setAdapter(myAdapter);
 
         SoccerMatchQuery query = new SoccerMatchQuery();
         //set Toast

@@ -1,8 +1,10 @@
 package com.example.finalproject.soccer;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -32,9 +34,41 @@ public class SoccerFavoriteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soccer_favorite);
 
+        pbFSoccer = findViewById(R.id.pbFSoccer);
+
         favoriteList = findViewById(R.id.lvFSoccer);
+        pbFSoccer.setVisibility(View.VISIBLE);
+        pbFSoccer.setProgress(25);
         loadSoccerFromDatabase();
+        pbFSoccer.setProgress(50);
         favoriteList.setAdapter(myAdapter);
+        pbFSoccer.setProgress(100);
+        pbFSoccer.setVisibility(View.INVISIBLE);
+
+        favoriteList.setOnItemClickListener((parent, view, position, id) -> {
+            AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+            alertBuilder.setTitle("Do you want to see details of this match: ")
+                    .setMessage(myAdapter.getItem(position).getTitle())
+                    .setPositiveButton("GO", (click, arg)->{
+                        Intent goToDetail = new Intent(SoccerFavoriteActivity.this, SoccerDetailActivity.class);
+                        goToDetail.putExtra("sTitle", myAdapter.getItem(position).getTitle());
+                        goToDetail.putExtra("sDate", myAdapter.getItem(position).getDate());
+                        goToDetail.putExtra("sCompetition", myAdapter.getItem(position).getCompetition());
+                        goToDetail.putExtra("sVideoUrl", myAdapter.getItem(position).getVideoUrl());
+                        goToDetail.putExtra("sThumbnailUrl", myAdapter.getItem(position).getThumbnailUrl());
+                        goToDetail.putExtra("sTeam1", myAdapter.getItem(position).getTeam1());
+                        goToDetail.putExtra("sTeam2", myAdapter.getItem(position).getTeam2());
+                        startActivity(goToDetail);
+                    })
+                    .setNegativeButton("Remove from My Favorite", (click, agr)->{
+                        deleteSoccerFromDatabase(id);
+                        soccerFavoriteList.remove(position);
+                        myAdapter.notifyDataSetChanged();
+                    })
+                    //.setView(getLayoutInflater().inflate(R.layout.send_layout, null))
+                    .create().show();
+
+        });
 
     }
 
@@ -66,8 +100,6 @@ public class SoccerFavoriteActivity extends AppCompatActivity {
             txtDate.setText(getItem(position).getDate());
             TextView txtComp = newView.findViewById(R.id.soccerFCompetition);
             txtComp.setText((getItem(position).getCompetition()));
-            CheckBox cbFavorite = newView.findViewById(R.id.cbSoccerFavorite);
-            cbFavorite.setChecked(true);
             return newView;
         }
     }
