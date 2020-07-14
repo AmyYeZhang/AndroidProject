@@ -1,6 +1,6 @@
-package com.example.finalproject;
+package com.example.finalproject.soccer;
 
-public class SoccerFavorite {
+public class SoccerDetail {
 
     private long id;
     private String title;
@@ -11,7 +11,7 @@ public class SoccerFavorite {
     private String competition;
     private String thumbnailUrl;
 
-    public SoccerFavorite(long id, String title, String team1, String team2, String videoUrl, String date, String competition, String thumbnailUrl){
+    public SoccerDetail(long id, String title, String team1, String team2, String videoUrl, String date, String competition, String thumbnailUrl){
         this.id = id;
         this.title = title;
         this.team1 = team1;

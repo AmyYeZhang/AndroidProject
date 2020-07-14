@@ -10,11 +10,25 @@
         android:layout_alignParentStart="true"/>
 
     <CheckBox
-        android:id="@+id/cbFavorite"
+        android:id="@+id/cbSoccerFavorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_gravity="fill"
         android:text="@string/soccer_favorite" />
+
+    <TextView
+        android:id="@+id/soccerFCompetition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soccerFTitle"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/soccerFDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soccerFCompetition"
+        android:gravity="center"/>
 
 </RelativeLayout>

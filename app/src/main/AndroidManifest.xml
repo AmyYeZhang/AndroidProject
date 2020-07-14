@@ -12,11 +12,11 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SoccerFavoriteActivity"></activity>
-        <activity android:name=".SoccerDetailActivity" />
+        <activity android:name=".soccer.SoccerFavoriteActivity"></activity>
+        <activity android:name=".soccer.SoccerDetailActivity" />
         <activity android:name=".DeezerSongActivity" />
         <activity android:name=".LyricsSearchActivity" />
-        <activity android:name=".SoccerMatchActivity" />
+        <activity android:name=".soccer.SoccerMatchActivity" />
         <activity android:name=".GeoDataActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

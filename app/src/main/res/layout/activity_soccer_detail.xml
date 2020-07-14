@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SoccerMatchActivity">
+    tools:context=".soccer.SoccerMatchActivity">
 
     <TextView
         android:id="@+id/soccerDetail"
@@ -14,47 +14,56 @@
         android:textAlignment="center"
         android:layout_alignParentTop="true"/>
 
-    <VideoView
-        android:id="@+id/soccerVideoView"
+    <ImageView
+        android:id="@+id/soccerDImage"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_below="@+id/soccerDetail"
-        android:visibility="invisible"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soccerDetail"/>
 
     <TextView
         android:id="@+id/soccerDTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/soccerVideoView"/>
+        android:gravity="center"
+        android:layout_below="@+id/soccerDImage"/>
 
     <TextView
         android:id="@+id/soccerDCompetition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_below="@+id/soccerDTitle"/>
 
     <TextView
         android:id="@+id/soccerDDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_below="@+id/soccerDCompetition"/>
+
+    <VideoView
+        android:id="@+id/soccerVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/soccerDDate"
+        android:visibility="invisible"/>
 
     <ProgressBar
         android:id="@+id/pbDSoccer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        android:layout_above="@+id/rlDBottom"
+        android:layout_above="@+id/rlSoccerDBottom"
         style="?android:attr/progressBarStyleHorizontal" />
 
     <RelativeLayout
-        android:id="@+id/rlDBottom"
+        android:id="@+id/rlSoccerDBottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
         <Button
-            android:id="@+id/btnDHighlight"
+            android:id="@+id/btnSoccerDHighlight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -64,11 +73,11 @@
             android:id="@+id/etDSoccer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/btnDHighlight"
-            android:layout_toLeftOf="@+id/cbDFavorite"
+            android:layout_toRightOf="@+id/btnSoccerDHighlight"
+            android:layout_toLeftOf="@+id/cbSoccerDFavorite"
             android:hint="@string/soccer_hint"/>
         <CheckBox
-            android:id="@+id/cbDFavorite"
+            android:id="@+id/cbSoccerDFavorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

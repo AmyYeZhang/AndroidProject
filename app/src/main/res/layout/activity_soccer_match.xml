@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SoccerMatchActivity">
+    tools:context=".soccer.SoccerMatchActivity">
 
     <TextView
         android:id="@+id/tvSoccerTitle"
@@ -28,18 +28,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        android:layout_above="@+id/rlBottom"
+        android:layout_above="@+id/rlSoccerBottom"
         style="?android:attr/progressBarStyleHorizontal" />
 
 
     <RelativeLayout
-        android:id="@+id/rlBottom"
+        android:id="@+id/rlSoccerBottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
         <Button
-            android:id="@+id/btnFList"
+            android:id="@+id/btnSoccerFList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -48,11 +48,11 @@
             android:id="@+id/etSoccer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/btnFList"
-            android:layout_toStartOf="@+id/btnHelp"
+            android:layout_toEndOf="@+id/btnSoccerFList"
+            android:layout_toStartOf="@+id/btnSoccerHelp"
             android:hint="@string/soccer_hint"/>
         <Button
-            android:id="@+id/btnHelp"
+            android:id="@+id/btnSoccerHelp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"

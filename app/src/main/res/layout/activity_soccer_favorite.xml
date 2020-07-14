@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SoccerMatchActivity">
+    tools:context=".soccer.SoccerMatchActivity">
 
     <TextView
-        android:id="@+id/tvFTitle"
+        android:id="@+id/tvSoccerFTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/soccer_MyFavorite"
@@ -20,25 +20,25 @@
         android:layout_height="match_parent"
         android:transcriptMode="alwaysScroll"
         android:stackFromBottom="true"
-        android:layout_below="@+id/tvFTitle"
-        android:layout_above="@+id/rlFBottom"/>
+        android:layout_below="@+id/tvSoccerFTitle"
+        android:layout_above="@+id/pbFSoccer"/>
 
     <ProgressBar
         android:id="@+id/pbFSoccer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        android:layout_above="@+id/rlFBottom"
+        android:layout_above="@+id/rlSoccerFBottom"
         style="?android:attr/progressBarStyleHorizontal" />
 
     <RelativeLayout
-        android:id="@+id/rlFBottom"
+        android:id="@+id/rlSoccerFBottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
         <Button
-            android:id="@+id/btnFQuit"
+            android:id="@+id/btnSoccerFQuit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -47,11 +47,11 @@
             android:id="@+id/etFSoccer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/btnFQuit"
-            android:layout_toLeftOf="@+id/btnHelp"
+            android:layout_toRightOf="@+id/btnSoccerFQuit"
+            android:layout_toLeftOf="@+id/btnSoccerHelp"
             android:hint="@string/soccer_hint"/>
         <Button
-            android:id="@+id/btnHelp"
+            android:id="@+id/btnSoccerHelp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
