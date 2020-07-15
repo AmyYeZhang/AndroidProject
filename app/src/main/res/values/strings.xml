@@ -13,7 +13,7 @@
     <string name="soccer_favorite">Favorite</string>
     <string name="soccer_quit">Back</string>
     <string name="soccer_detail">Soccer Match Detail</string>
-    <string name="soccer_highlight">Highlight On/Off</string>
+    <string name="soccer_highlight">Watch Highlight</string>
     <string name="soccer_list_toast">Soccer match list is uploading</string>
     <string name="soccer_list_snackbar">Soccer match list uploaded successfully</string>
     <string name="soccer_detail_toast">Image is uploading</string>

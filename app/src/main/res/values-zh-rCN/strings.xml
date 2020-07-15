@@ -14,7 +14,7 @@
     <string name="soccer_favorite">收藏</string>
     <string name="soccer_quit">返回</string>
     <string name="soccer_detail">足球竞赛详情</string>
-    <string name="soccer_highlight">精彩回顾 开/关</string>
+    <string name="soccer_highlight">观看精彩回顾</string>
     <string name="soccer_list_toast">足球竞赛信息正在加载</string>
     <string name="soccer_list_snackbar">足球竞赛信息加载成功</string>
     <string name="soccer_detail_toast">正在加载图片</string>
